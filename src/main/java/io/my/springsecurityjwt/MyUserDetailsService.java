@@ -21,6 +21,7 @@ public class MyUserDetailsService implements UserDetailsService {
         Collection<? extends GrantedAuthority> list = Collections.singletonList(new SimpleGrantedAuthority("ROLE_ADMIN"));
         if (userName.equals("foo"))
             return new User("foo", "foo", list);
+
         if (userName.equals("bar"))
             return new User("bar", "bar", new ArrayList<>());
 
